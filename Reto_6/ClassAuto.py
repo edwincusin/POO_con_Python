@@ -55,10 +55,8 @@ auto2.actualizarKm(9999)
 
 print(auto1.__dict__)
 print(auto2.__dict__)
-
 auto1.actualizarKm(-40000)#VALORNEGATIVOS
 auto2.actualizarKm(-9999)#VALOR NEGATIVO
-
 
 print()
 print("=======================================================")
@@ -67,8 +65,14 @@ print("=======================================================")
 
 auto1.realizarViaje(500)
 auto2.realizarViaje(1000)
-
 print(auto1.__dict__)
 print(auto2.__dict__)
 
+print()
+print("=======================================================")
+print("PRUEBA EJECUTAR METODO ESTADO AUTO")
+print("=======================================================")
+
+auto1.estadoAuto()
+auto2.estadoAuto()
         
