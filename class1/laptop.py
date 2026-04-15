@@ -7,14 +7,25 @@ class Laptop:
         self.costo=costo
         self.impuesto=impuesto
     
+    #metodos de isntancia
     def valorFinal(self):
         return self.costo+self.impuesto
     
     def valorDescuento(self,descuento):
         return (self.costo*descuento)/100
 
-LaptopPepito=Laptop("lenovo","i7", memoria=32)
+    #METODOS ESTATICOS
+    @staticmethod
+    def comparar_costo(lapto1,lapto2):
+        if lapto1.costo ==lapto2.costo:
+            return "los costos son iguales"
+        else:
+            return " los costos son diferentes"
 
-print(LaptopPepito.__dict__)
-print(LaptopPepito.valorFinal())
-print(f"el valor de descuento al {LaptopPepito.valorDescuento(10)}")
+    #METODOS DE CLASE==>cls es una referenia a la misma clase es ocmo un constructor alternativo
+    @classmethod
+    def asusLaptop(cls,costo):
+        marca="AZUS"
+        procesador="i5"
+        memoria =32
+        return cls(marca,procesador,memoria,costo)
